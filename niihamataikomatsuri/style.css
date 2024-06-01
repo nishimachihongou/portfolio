@@ -1,0 +1,272 @@
+@charset "utf-8";
+
+/* 共通 */
+html {
+    font-size: 100%;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;    
+}
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+ul {
+    list-style-type: none;
+}
+.otokomae ul {
+    margin: 0 auto;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 2em;
+}
+.otokomae blockquote ul {
+    width: 30%;
+}
+.otokomae>ul {
+    width: 15%;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+#taiko-slider {
+   margin: 0 auto;
+}
+#taiko-slider img {
+    width: 100%;
+    height: 80vh;
+}
+.niihama {
+    width: 100%;
+    object-fit: cover;
+
+}
+.main-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin: 5% auto;
+    width: 50%;
+}
+#fusa1 {
+    width: 25%;
+    
+    /* display: flex;
+    justify-content: space-between; */
+    position: absolute;
+    top: 85vh;
+    left: 0;
+}
+#fusa2 {
+    width: 25%;
+    /* display: flex;
+    justify-content: space-between; */
+    position: absolute;
+    top: 85vh;
+    right: 0;
+}
+#fusa1.fix ,
+#fusa2.fix {
+    position: fixed;
+    top: 10vh;
+}
+#fusa1 p img,
+#fusa2 p img {
+    height: 30vh;
+    width: auto;
+}
+.fusahidari {
+    transform: scale(-1,1);
+}
+
+.contentsu-item {
+    display: grid;
+    margin-bottom: 30%;
+
+}
+.contentsu-item img {
+    width: 100%;
+    height: auto;
+}
+.wataru  {
+    width: 30%;
+   
+}
+.wataru li {
+    margin: 0 auto;
+    list-style-type: disc;
+   
+    
+}
+.reki {
+    text-align: center;
+}
+
+/* footer↓ */
+footer {
+    font-family: 'sacramento',cursive;
+    height: 50vw ;
+    background-image: url(images/footer.JPG);
+    background-color: rgba(255,255,255, 0.55);
+    background-size: cover; 
+    background-position: center center;
+    background-blend-mode: screen;
+}
+.page-footer {
+    text-align: center;
+    margin-top: auto;
+}
+.JSHS {
+    font-size: 5vw;
+    padding: 6vw 0;
+
+}
+.info {
+    margin: auto;
+    padding: 0.20rem;
+    border-spacing: 0;
+}
+.info th {
+    color: rgb(46, 46, 47);
+}
+.info td {
+    color: rgb(70, 70, 71);
+}
+.info th,
+.info td{
+    border-bottom: 0.5px solid ;
+}
+
+/* footerここまで */
+.ikemen {
+   text-align: center;
+}
+.otokomae {
+ margin: 0 auto;
+
+}
+
+/* mobileのみ */
+@media screen and (max-width:600px) {
+    .main-nav {
+        display: block;
+    }
+#fusa1.fix ,
+#fusa2.fix {
+    position: fixed;
+    top: 16vh;
+}
+
+   
+#fusa1 ,
+#fusa2 {
+        top: 30vh;
+    }
+    #fusa p img {
+        height: 2%;
+    }
+    .contentsu-item  {
+        width: 73%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #open_nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 99;
+    }
+    .main-nav {
+        width: 50%;
+        position: fixed;
+        top: 70px;
+        right: -50%;
+        z-index: 99;
+        background-color: rgb(0,0,0,0.8);
+        transition:transform 1s ;
+    }
+    .show {
+        transform: translate3d(-100%,0,0);
+    }
+    .main-nav li {
+        padding: 1em;
+    }
+    .main-nav li a  {
+        color: aqua;
+         text-decoration:underline wavy;
+         padding-top: 15px;
+    }
+    .JSHS {
+        font-size: 5vw;
+        padding: 3vw 0;
+    
+    }
+    #taiko-slider {
+        margin: 0 auto;
+     }
+     #taiko-slider img {
+         width: 100vw;
+         height: 30vw;
+     }
+
+     .otokomae>ul {
+        width: 20%;
+    }
+    .otokomae blockquote ul {
+        width: 50%;
+    }
+    
+     
+/* このブログについて↓  */
+.ikemen img{
+    width: 80vw;
+
+}
+.ikemen2 {
+    margin-top: 30vw;
+}
+.otokomae {
+    width: 100vw;
+   
+   }
+.otokomae p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+}
+/* pcのみ */
+@media (min-width:601px) {
+    .niihama {
+        height: 80vh;
+    }
+    .contentsu-item {
+        gap: 30px;
+        grid-template-columns: repeat(3,1fr);
+        width: 53%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .page-footer {
+       font-size: 3vw; 
+    }
+    #open_nav {
+        display: none;
+    }
+    .otokomae {
+        width: 96vh;
+       
+       }
+       #fusa1 p img,
+#fusa2 p img {
+    height: 80vh;
+    width: auto;
+}
+}
